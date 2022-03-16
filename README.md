@@ -92,6 +92,7 @@ The above script will download all the necessary dependencies and run tests as p
 ...
 ![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play2.png?raw=true)
 
+You will notice the log level is set to `WARN`. This was to prevent springboot `INFO` log entries to crowd our playground. Should you not want the `WARN` entries either, simply set `logging.level.root` to `OFF`
 ## Notes
 
 Should the card suit symbols not display on your terminal, try one of the following:
