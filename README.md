@@ -129,5 +129,5 @@ The application.properties file provides an attribute called **`poker.hand-size`
 Thank you very much - should you need further imformation, do not hesitate to contact me.
 I will keep this project public for a couple of weeks.
 
-Olivier Mutombo
+Olivier Mutombo  
 oliviermtb@gmail.com
