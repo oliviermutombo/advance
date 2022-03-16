@@ -74,9 +74,9 @@ In order to play this game you will first need to run the `build.sh` script.
 The above script will download all the necessary dependencies and run tests as per screenshots below
 You will notice that I also have created an `application-test.properties` This is to ensure that tests have their own configurations and prevent the test from getting stuck expecting user input since this is a console application.
 
-![N|Solid](https://raw.githubusercontent.com/oliviermutombo/advance/main/screenshots/build1.png)  
+![N|Solid](https://raw.githubusercontent.com/oliviermutombo/advance/master/screenshots/build1.png)  
 ...
-![N|Solid](https://github.com/oliviermutombo/advance/blob/main/screenshots/build2.png?raw=true)
+![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/build2.png?raw=true)
 
 ## Gameplay
 
@@ -88,9 +88,9 @@ In order to play this game you will need to run the `run.sh` script (`run.sh` ta
 ```
 The above script will download all the necessary dependencies and run tests as per screenshots below
 
-![N|Solid](https://github.com/oliviermutombo/advance/blob/main/screenshots/play1.png?raw=true)  
+![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play1.png?raw=true)  
 ...
-![N|Solid](https://github.com/oliviermutombo/advance/blob/main/screenshots/play2.png?raw=true)
+![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play2.png?raw=true)
 
 You will notice the log level is set to `WARN`. This was to prevent springboot `INFO` log entries to crowd our playground. Should you not want the `WARN` entries either, simply set `logging.level.root` to `OFF`
 ## Notes
@@ -112,21 +112,21 @@ I have also generated javadocs which should help you quickly understand how the 
 ***
 
 ## Discussion Points
-**- We would like to change the application from a console based application to a web based (HTML frontend with the backend in your chosen language) application.**
+**- We would like to change the application from a console based application to a web based (HTML frontend with the backend in your chosen language) application.**  
 This is the main reason why I have chosen to build this console application with springboot and disabling the web server with the below line in the application.properties file:
 ```java
 spring.main.web-application-type=NONE
 ```
-The advantage of this is that it still allows to build an app as microservice by making use of all the other features of springboot such as inversion of control and more...
-Should we need to turn this into backend, all we'll have to do will be toggling spring.main.web-application-type ON, implement controllers, set-up a new properties file for the web version and we're done. The services have already been implemented in such a way that this will be seemless.
+The advantage of this is that it still allows to build an app as a microservice by making use of all the other features of springboot such as inversion of control and more...
+Should we need to turn this into a backend, all we'll have to do is toggling spring.main.web-application-type ON, implement controllers, set up a new properties file for the web version and we're done. The services have already been implemented in such a way that this will be seamless.
 
-**We would like to replace the shuffling algorithm with a more realistic shuffling algorithm.**
-Inline with the previous point, all you have to do here is to provide another implemention of the DealerService which overrides the **shuffle** method and off you go!
+**We would like to replace the shuffling algorithm with a more realistic shuffling algorithm.**  
+Inline with the previous point, all we have to do here is to provide another implementation of the DealerService which overrides the **shuffle** method and off we go!
 
-**We would like to accommodate a different poker variant, such as Badugi, where not only the size of the hand is changed (4 cards instead of 5), but the hand ranks are also changed.**
-The application.properties file provides an attribute called **`poker.hand-size`** which allows you to change the size of the hand on the fly! Should you need to implement a new variant, again all you will have to do is implement a new **`PokerService`**.
+**We would like to accommodate a different poker variant, such as Badugi, where not only the size of the hand is changed (4 cards instead of 5), but the hand ranks are also changed.**  
+The application.properties file provides an attribute called **`poker.hand-size`** which allows you to change the size of the hand on the fly! Should we need to implement a new variant, again all we will have to do is implement a new **`PokerService`**.
 
-Thank you very much - should you need further imformation, do not hesitate to contact me.
+Thank you very much - should you need further information, do not hesitate to contact me.
 I will keep this project public for a couple of weeks.
 
 Olivier Mutombo  
