@@ -74,9 +74,9 @@ In order to play this game you will first need to run the `build.sh` script.
 The above script will download all the necessary dependencies and run tests as per screenshots below
 You will notice that I also have created an `application-test.properties` This is to ensure that tests have their own configurations and prevent the test from getting stuck expecting user input since this is a console application.
 
-![N|Solid](https://raw.githubusercontent.com/oliviermutombo/advance/master/screenshots/build1.png)  
+![N|Solid](https://raw.githubusercontent.com/oliviermutombo/advance/main/screenshots/build1.png)  
 ...
-![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/build2.png?raw=true)
+![N|Solid](https://github.com/oliviermutombo/advance/blob/main/screenshots/build2.png?raw=true)
 
 ## Gameplay
 
@@ -88,9 +88,9 @@ In order to play this game you will need to run the `run.sh` script (`run.sh` ta
 ```
 The above script will download all the necessary dependencies and run tests as per screenshots below
 
-![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play1.png?raw=true)  
+![N|Solid](https://github.com/oliviermutombo/advance/blob/main/screenshots/play1.png?raw=true)  
 ...
-![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play2.png?raw=true)
+![N|Solid](https://github.com/oliviermutombo/advance/blob/main/screenshots/play2.png?raw=true)
 
 You will notice the log level is set to `WARN`. This was to prevent springboot `INFO` log entries to crowd our playground. Should you not want the `WARN` entries either, simply set `logging.level.root` to `OFF`
 ## Notes
