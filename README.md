@@ -1,6 +1,6 @@
 # FIVE CARD DRAW
-[![N|Solid](https://www.advance.io/wp-content/uploads/2016/09/advance.png)](https://nodesource.com/products/nsolid) 
-By Olivier Mutombo
+[![N|Solid](https://www.advance.io/wp-content/uploads/2016/09/advance.png)](https://www.advance.io/)   
+By Olivier Mutombo  
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 This variant of the five card game (fcd) has been implemented as part of an assessment by advance and provides the following functionality:
@@ -21,41 +21,41 @@ This console based java application has been built using springboot by implement
 
 ## Folder structure
 
-**src/
-├─ main/
-│  ├─ java/
-│  │  ├─ com.advance.io.fcd/
-│  │  │  ├─ enums/
-│  │  │  │  ├─ HandStrength.java
-│  │  │  ├─ exceptions/
-│  │  │  │  ├─ OutOfCardsException.java
-│  │  │  ├─ models/
-│  │  │  │  ├─ Card.java
-│  │  │  │  ├─ Deck.java
-│  │  │  │  ├─ RoundResult.java
-│  │  │  ├─ services/
-│  │  │  │  ├─ IDealerService.java
-│  │  │  │  ├─ IDeckService.java
-│  │  │  │  ├─ impl/
-│  │  │  │  │  ├─ DealerService.java
-│  │  │  │  │  ├─ DeckService.java
-│  │  │  │  │  ├─ GameService.java
-│  │  │  │  │  ├─ PokerService.java
-│  │  │  ├─ utils/
-│  │  │  │  ├─ ConsoleUtil.java
-│  │  │  ├─ FcdApplication.java
-│  ├─ resources/
-│  │  ├─ application.properties
-├─ test/
-│  ├─ resources/
-│  │  ├─ application-test.properties
-│  ├─ java/
-│  │  ├─ com.advance.io.fcd/
-│  │  │  ├─ FcdApplicationTests.java
-│  │  │  ├─ services.impl/
-│  │  │  │  ├─ DealerServiceTest.java
-│  │  │  │  ├─ DeckServiceTest.java
-│  │  │  │  ├─ GameServiceTest.java
+**src/  
+├─ main/  
+│  ├─ java/  
+│  │  ├─ com.advance.io.fcd/  
+│  │  │  ├─ enums/  
+│  │  │  │  ├─ HandStrength.java  
+│  │  │  ├─ exceptions/  
+│  │  │  │  ├─ OutOfCardsException.java  
+│  │  │  ├─ models/  
+│  │  │  │  ├─ Card.java  
+│  │  │  │  ├─ Deck.java  
+│  │  │  │  ├─ RoundResult.java  
+│  │  │  ├─ services/  
+│  │  │  │  ├─ IDealerService.java  
+│  │  │  │  ├─ IDeckService.java  
+│  │  │  │  ├─ impl/  
+│  │  │  │  │  ├─ DealerService.java  
+│  │  │  │  │  ├─ DeckService.java  
+│  │  │  │  │  ├─ GameService.java  
+│  │  │  │  │  ├─ PokerService.java  
+│  │  │  ├─ utils/  
+│  │  │  │  ├─ ConsoleUtil.java  
+│  │  │  ├─ FcdApplication.java  
+│  ├─ resources/  
+│  │  ├─ application.properties  
+├─ test/  
+│  ├─ resources/  
+│  │  ├─ application-test.properties  
+│  ├─ java/  
+│  │  ├─ com.advance.io.fcd/  
+│  │  │  ├─ FcdApplicationTests.java  
+│  │  │  ├─ services.impl/  
+│  │  │  │  ├─ DealerServiceTest.java  
+│  │  │  │  ├─ DeckServiceTest.java  
+│  │  │  │  ├─ GameServiceTest.java  
 │  │  │  │  ├─ PokerServiceTest.java**
 ## Pre-requisites
 - Install java JDK (I used Java 11)
@@ -72,8 +72,9 @@ In order to play this game you will first need to run the `build.sh` script.
 > ./build.sh
 ```
 The above script will download all the necessary dependencies and run tests as per screenshots below
+You will notice that I also have created an `application-test.properties` This is to ensure that tests have their own configurations and prevent the test from getting stuck expecting user input since this is a console application.
 
-&&&&&&&&&&&&&&&&&&&&&&&
+![N|Solid](https://raw.githubusercontent.com/oliviermutombo/advance/master/screenshots/build1.png)
 &&&&&&&&&&&&&&&&&&&&&&&
 
 ## Gameplay
@@ -94,16 +95,16 @@ The above script will download all the necessary dependencies and run tests as p
 Should the card suit symbols not display on your terminal, try one of the following:
 - Change your terminal's font to one that allows UTF-8
 - Set the attribute **`poker.show-suit-symbol`** to **`false`** in your **application.properties** file.
-it should look like this:
+  it should look like this:
     ```java
     poker.show-suit-symbol=false
     ```
-    This will remplace the symbols with the first letter of the associated suit. e.g. **D** for Diamond, **C** for club, **H** for Heart and **S** for Spade
-    However, since this demo executes from a jar file that is not associated to external resources, you will need to re-build the project everytime you make changes to this file. Under normal circumstances we would probably would have used a config server for this.
+  This will remplace the symbols with the first letter of the associated suit. e.g. **D** for Diamond, **C** for club, **H** for Heart and **S** for Spade
+  However, since this demo executes from a jar file that is not associated to external resources, you will need to re-build the project everytime you make changes to this file. Under normal circumstances we would probably would have used a config server for this.
 
 ## Javadoc
 
-I have also generated javadocs which should help you quickly understand how the application works. Please refer to the javadoc folder in the root directory or click [here](https://google.com/) to access it.
+I have also generated javadocs which should help you quickly understand how the application works. Please refer to the javadoc folder in the root directory and launch index.html
 
 ***
 
