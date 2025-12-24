@@ -8,6 +8,7 @@ This variant of the five card game (fcd) has been implemented as part of an asse
 - Simulate shuffling a standard deck of 52 cards
 - Deal a single hand of 5 cards to the player
 - Evaluate the player's hand, informing them of the highest ranked poker hand that matches their hand of 5 cards
+- **NEW:** Generate videos from static images
 
 ## Notes
 
@@ -91,6 +92,22 @@ The above script will download all the necessary dependencies and run tests as p
 ![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play1.png?raw=true)  
 ...
 ![N|Solid](https://github.com/oliviermutombo/advance/blob/master/screenshots/play2.png?raw=true)
+
+## Video Generation from Image
+
+The application now includes functionality to generate videos from static images. For detailed information about this feature, see [VIDEO_GENERATION.md](VIDEO_GENERATION.md).
+
+### Quick Start
+
+Generate a video from an image:
+```sh
+./video-gen.sh /path/to/image.jpg
+```
+
+Generate a 10-second video at 24 fps:
+```sh
+./video-gen.sh /path/to/image.jpg /path/to/output.mp4 10 24
+```
 
 You will notice the log level is set to `WARN`. This was to prevent springboot `INFO` log entries to crowd our playground. Should you not want the `WARN` entries either, simply set `logging.level.root` to `OFF`
 ## Notes

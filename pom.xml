@@ -15,6 +15,7 @@
 	<description>Five Card Draw - Poker Game</description>
 	<properties>
 		<java.version>11</java.version>
+		<javacv.version>1.5.9</javacv.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -34,6 +35,13 @@
 			<version>2.3.5</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- JavaCV for video processing -->
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacv-platform</artifactId>
+			<version>${javacv.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -41,6 +49,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.advance.io.fcd.FcdApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
