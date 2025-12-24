@@ -3,7 +3,7 @@
 # Video Generator Script
 # Usage: ./video-gen.sh <imagePath> [outputPath] [duration] [frameRate]
 
-if [ ! -f ./target/*.jar ]; then
+if [ ! -f ./target/fcd-*.jar ]; then
     echo "It seems you have not built the project yet! Please start with ./build.sh"
     exit 1
 fi
@@ -27,4 +27,4 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-java -jar target/*.jar --video-gen "$@"
+java -jar target/fcd-*.jar --video-gen "$@"
